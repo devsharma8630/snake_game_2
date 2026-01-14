@@ -6,7 +6,8 @@ import mediapipe as mp
 import numpy as np
 import random
 
-mp_hands = mp.solutions.hands
+hands = mp.solutions.hands.Hands()
+
 hands = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7)
 draw = mp.solutions.drawing_utils
 
@@ -102,3 +103,4 @@ cap.release()
 cv2.destroyAllWindows()
 
 st.write("Hand Gesture Game Running...")
+
